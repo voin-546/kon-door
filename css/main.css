@@ -99,13 +99,17 @@ header {
   align-items: center;
   padding: 0 100px;
   background: #131010;
-  transition: 0.5s;
   position: fixed;
   z-index: 1;
   height: 80px;
 }
 header.show {
   height: 400px;
+}
+@media (min-width: 1101px) {
+  header.show {
+    height: 80px;
+  }
 }
 header.show nav {
   height: 330px;
@@ -134,6 +138,7 @@ header.show nav {
   header {
     padding: 20px;
     align-items: start;
+    transition: 0.5s;
   }
 }
 @media (max-width: 900px) {
