@@ -316,17 +316,12 @@ main {
         color: #fff;
         font: 700 18px "Open Sans";
         display: inline-block;
-        transition: background .5s linear, color .5s linear;
         @media (max-width: 487px) {
           padding: 15px 85px;
         }
         &.icon {
           border: none;
           padding: none;
-        }
-        &:hover {
-          background-color: #fff;
-          color: #131010;
         }
       }
     }

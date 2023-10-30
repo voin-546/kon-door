@@ -82,11 +82,6 @@ body.error #particles-js a {
   color: #fffcf4;
   font: 400 21px "Open Sans";
   border: 1px solid #fffcf4;
-  transition: background-color 0.5s, color 0.5s;
-}
-body.error #particles-js a:hover {
-  background-color: #fffcf4;
-  color: #201a1a;
 }
 
 ::-webkit-scrollbar {
@@ -372,7 +367,6 @@ main #particles-js .text a {
   color: #fff;
   font: 700 18px "Open Sans";
   display: inline-block;
-  transition: background 0.5s linear, color 0.5s linear;
 }
 @media (max-width: 487px) {
   main #particles-js .text a {
@@ -382,10 +376,6 @@ main #particles-js .text a {
 main #particles-js .text a.icon {
   border: none;
   padding: none;
-}
-main #particles-js .text a:hover {
-  background-color: #fff;
-  color: #131010;
 }
 
 .container {
@@ -591,11 +581,6 @@ section.about .container .about-info a {
   padding: 15px 35px;
   border: 1px solid #201a1a;
   align-self: end;
-  transition: background-color 0.5s, color 0.5s;
-}
-section.about .container .about-info a:hover {
-  background-color: #201A1A;
-  color: #fff;
 }
 @media (max-width: 600px) {
   section.about .container .about-info a {
@@ -1052,14 +1037,14 @@ section.login .login-form {
     max-width: 95%;
   }
 }
-section.login .login-form h2 {
+section.login .login-form h1 {
   color: #131010;
   font: 400 2.25rem/1.75rem "Garamond";
   text-transform: uppercase;
 }
 @media (max-width: 1070px) {
-  section.login .login-form h2 {
-    text-align: center;
+  section.login .login-form h1 {
+    padding-inline: 0;
   }
 }
 section.login .login-form form {
