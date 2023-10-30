@@ -193,7 +193,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: 100%;
   height: 80px;
   transition: 0.5s;
   background: #131010;
@@ -202,7 +202,6 @@ header nav {
   header nav {
     position: absolute;
     top: 80px;
-    width: 100%;
     flex-direction: column;
     align-items: start;
     display: block;
