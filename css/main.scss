@@ -70,11 +70,6 @@ body {
         color: #fffcf4;
         font: 400 21px "Open Sans";
         border: 1px solid #fffcf4;
-        transition: background-color .5s, color .5s;
-        &:hover {
-          background-color: #fffcf4;
-          color: #201a1a;
-        }
       }
     }
   }
@@ -530,11 +525,6 @@ section {
           padding: 15px 35px;
           border: 1px solid #201a1a;
           align-self: end;
-          transition: background-color .5s   , color .5s;
-          &:hover {
-            background-color: #201A1A;
-            color: #fff;
-          }
           @media (max-width: 600px) {
             align-self: center;
           }
