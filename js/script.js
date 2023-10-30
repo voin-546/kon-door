@@ -35,7 +35,3 @@ document.addEventListener('click', (e) => {
     burger.classList.remove("open")
   }
 })
-setTimeout(() => {
-    let preloader = document.querySelector(".preloader-bg");
-    preloader.classList.add("loaded");
-}, 3500)
