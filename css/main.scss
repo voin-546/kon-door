@@ -8,7 +8,9 @@
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 }
-
+::-webkit-file-upload-button {
+  display: none;
+}
 img {
   font: 21px "Open Sans";
 }
@@ -954,10 +956,29 @@ section {
         width: 100%;
         display: flex;
         flex-direction: column;
+        .file-input__input {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1; 
+        }                 
         label {
           color: #131010;
           font: 400 1rem/1.5rem "Open Sans";
           padding: 2.5rem 0 .31rem;
+          &.file {
+            cursor: pointer;
+            display: inline-flex;
+            gap: 0 15px;
+            padding: 0;
+            margin-top: 5px;
+            span {
+              font: 400 16px/24px "Open Sans";
+              color: #938F96;
+            }
+          } 
         }
         input {
           border: .5px solid #131010;
@@ -965,6 +986,7 @@ section {
           color: #131010;
           font-family: "Open Sans";
           outline-color: #201a1a;
+          border: none;
           &::placeholder {
             color: #938f96;
             font-family: Open Sans;
@@ -984,19 +1006,82 @@ section {
           padding: 1.87rem 0 2rem;
           display: flex;
           gap: 10px;
-          span {
+          p {
             color: #131010;
-            font: 600 1rem "Open Sans";
+            font: 700 16px "Open Sans";
+          }
+          input {
+            cursor: pointer;
+            width: 0;
+            overflow: hidden;
+            &:checked ~ .checkmark {
+              background-color: #47da99;
+              animation: pop 0.5s;
+              animation-direction: alternate;
+              &:after {
+                display: block;
+              }
+             }
+          }
+          label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            padding: 0;
+            input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 0;
+              width: 0;
+              &:checked ~ .checkmark {
+                background-color: #131010;
+                animation: pop 0.5s;
+                animation-direction: alternate;
+                &:after {
+                  display: block;
+                }
+               }
+             }
+             .checkmark {
+              position: relative;
+              top: 0;
+              left: 0;
+              height: 1.3em;
+              width: 1.3em;
+              background-color: #ccc;
+              transition: all 0.3s;
+              border-radius: 5px;
+              &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 0.45em;
+                top: 0.25em;
+                width: 0.25em;
+                height: 0.5em;
+                border: solid white;
+                border-width: 0 0.15em 0.15em 0;
+                transform: rotate(45deg);
+               }
+             }
           }
         }
+        @keyframes pop {
+          0% { transform: scale(1); }         
+          50% { transform: scale(0.9); }         
+          100% { transform: scale(1); }
+         }
         button {
-          padding: .94rem 2.19rem;
-          width: 1.8rem;
+          padding: 15px 30px;
           color: #fffcf4;
           font: 700 1.125rem "Open Sans";
           background: #131010;
           border: none;
           cursor: pointer;
+          width: 170px;
         }
       }
     }

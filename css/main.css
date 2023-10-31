@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-file-upload-button {
+  display: none;
+}
+
 img {
   font: 21px "Open Sans";
 }
@@ -1056,10 +1060,29 @@ section.login .login-form form {
   display: flex;
   flex-direction: column;
 }
+section.login .login-form form .file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
 section.login .login-form form label {
   color: #131010;
   font: 400 1rem/1.5rem "Open Sans";
   padding: 2.5rem 0 0.31rem;
+}
+section.login .login-form form label.file {
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0 15px;
+  padding: 0;
+  margin-top: 5px;
+}
+section.login .login-form form label.file span {
+  font: 400 16px/24px "Open Sans";
+  color: #938F96;
 }
 section.login .login-form form input {
   border: 0.5px solid #131010;
@@ -1067,6 +1090,7 @@ section.login .login-form form input {
   color: #131010;
   font-family: "Open Sans";
   outline-color: #201a1a;
+  border: none;
 }
 section.login .login-form form input::-moz-placeholder {
   color: #938f96;
@@ -1097,18 +1121,105 @@ section.login .login-form form .agree {
   display: flex;
   gap: 10px;
 }
-section.login .login-form form .agree span {
+section.login .login-form form .agree p {
   color: #131010;
-  font: 600 1rem "Open Sans";
+  font: 700 16px "Open Sans";
+}
+section.login .login-form form .agree input {
+  cursor: pointer;
+  width: 0;
+  overflow: hidden;
+}
+section.login .login-form form .agree input:checked ~ .checkmark {
+  background-color: #47da99;
+  -webkit-animation: pop 0.5s;
+          animation: pop 0.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+section.login .login-form form .agree input:checked ~ .checkmark:after {
+  display: block;
+}
+section.login .login-form form .agree label {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0;
+}
+section.login .login-form form .agree label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+section.login .login-form form .agree label input:checked ~ .checkmark {
+  background-color: #131010;
+  -webkit-animation: pop 0.5s;
+          animation: pop 0.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+section.login .login-form form .agree label input:checked ~ .checkmark:after {
+  display: block;
+}
+section.login .login-form form .agree label .checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+section.login .login-form form .agree label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+@-webkit-keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 section.login .login-form form button {
-  padding: 0.94rem 2.19rem;
-  width: 1.8rem;
+  padding: 15px 30px;
   color: #fffcf4;
   font: 700 1.125rem "Open Sans";
   background: #131010;
   border: none;
   cursor: pointer;
+  width: 170px;
 }
 @media (max-width: 575px) {
   section.about-cards h1 {
