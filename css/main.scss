@@ -374,9 +374,6 @@ section {
     background: #201a1a;
     h1 {
       color: #fffcf4;
-      @media (max-width: 1320px) {
-        padding-inline: 80px;
-      }
       @media (max-width: 1200px) {
         padding-inline: 30px;
       }
@@ -721,6 +718,11 @@ section {
   }
   &.block {
     .container {
+      h1 {
+        @media (max-width: 560px) {
+          text-align: center;
+        }
+      }
       &:nth-child(2) {
         margin-top: 40px;
         display: flex;
@@ -732,6 +734,9 @@ section {
         }
         @media (max-width: 1200px) {
           gap: 20px;
+        }
+        @media (max-width: 900px) {
+          padding-inline: 10px;
         }
       }
       .item {
@@ -855,22 +860,22 @@ section {
   }
   &.question {
     color: #fff;
-    h2 {
+    h1 {
       font: 400 2.25rem/1.75rem "Garamond";
       text-transform: uppercase;
-      @media (max-width: 1175px) {
-        padding: 0 1rem;
+      @media (max-width: 1100px) {
+        padding-inline: 0;
       }
     }
     .container {
-      display: flex;
-      gap: 1.44rem;
-      flex-wrap: wrap;
-      @media (max-width: 1178px) {
-        justify-content: center;
-      }
       &:nth-child(2) {
+        display: flex;
+        gap: 1.44rem;
+        flex-wrap: wrap;
         margin-top: 2.5rem;
+        @media (max-width: 1178px) {
+          justify-content: center;
+        }
       }
       .faq {
         width: min(100%, 36.1rem);
