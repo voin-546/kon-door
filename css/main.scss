@@ -7,6 +7,10 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  user-select: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+  cursor: text;
 }
 ::-webkit-file-upload-button {
   display: none;
