@@ -1122,13 +1122,13 @@ section.login .login-form form label {
   color: #131010;
   font: 400 1rem/1.5rem "Open Sans";
   padding: 2.5rem 0 0.31rem;
-  cursor: pointer;
 }
 section.login .login-form form label.file {
   display: inline-flex;
   gap: 0 15px;
   padding: 0;
   margin-top: 5px;
+  cursor: pointer;
 }
 section.login .login-form form label.file span {
   font: 400 16px/24px "Open Sans";
