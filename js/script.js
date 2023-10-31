@@ -27,11 +27,32 @@ burger.onclick = function () {
         burger.classList.remove("open")
     }
 }
-let header = document.querySelector('header');
-document.addEventListener('click', (e) => {
+let header = document.querySelector("header");
+document.addEventListener("click", (e) => {
   const click = e.composedPath().includes(header);
   if ( !click ) {
     header.classList.remove("show");
     burger.classList.remove("open")
   }
 })
+
+const imageInput = document.querySelector(".file-input");
+const previewContainer = document.querySelector(".preview-container");
+imageInput.addEventListener("change", function(event) {
+  const files = event.target.files;
+  if (files && files.length > 0) {
+    previewContainer.innerHTML = "";
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        const img = document.createElement("img");
+        img.src = e.target.result;
+        img.alt = "Предварительный просмотр";
+        previewContainer.appendChild(img);
+      }
+      reader.readAsDataURL(file);
+    }
+  }
+});
