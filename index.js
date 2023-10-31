@@ -34,7 +34,7 @@ app.get("*", (req, res) => {
     res.sendFile(__dirname + "/pages/404.html")
 })
 
-const PORT = 3001;
+const PORT = 3000;
 const HOST = "localhost";
 
 app.listen(PORT, HOST, () => {
