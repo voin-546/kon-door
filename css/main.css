@@ -1745,10 +1745,16 @@ section.testimonials .container ul {
 }
 section.testimonials .container ul li {
   margin-bottom: 36px;
+  width: min(100%, 572px);
 }
 @media (max-width: 1180px) {
   section.testimonials .container ul li {
     margin-bottom: 20px;
+  }
+}
+@media (max-width: 1164px) {
+  section.testimonials .container ul li {
+    margin: auto auto 10px;
   }
 }
 @media (max-width: 1162px) {
@@ -1759,7 +1765,7 @@ section.testimonials .container ul li {
   }
 }
 section.testimonials .container ul li img {
-  width: min(100%, 572px);
+  width: 100%;
 }
 section.contact .container .wrapper {
   margin: auto;

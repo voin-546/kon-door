@@ -1495,8 +1495,12 @@ section {
         }
         li {
           margin-bottom: 36px;
+          width: min(100%, 572px);
           @media (max-width: 1180px) {
             margin-bottom: 20px;
+          }
+          @media (max-width: 1164px) {
+            margin: auto auto 10px;
           }
           @media (max-width: 1162px) {
             margin-bottom: 10px;
@@ -1504,7 +1508,7 @@ section {
             justify-content: center;
           }
           img {
-            width: min(100%, 572px);
+            width: 100%;
           }
         }
       }
