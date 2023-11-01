@@ -50,7 +50,6 @@ a.back-to-top {
 body {
   overflow-x: hidden;
   &.error {
-    min-height: 100vh;
     background-color: #201A1A;
     color: #fffcf4;
     width: 100%;
@@ -63,6 +62,9 @@ body {
         height: 100vh;
         z-index: 0;
         overflow: hidden;
+        @media (max-width: 900px) {
+          height: 75vh;
+        }
         .particle {
           position: absolute;
           display: block;
@@ -1700,10 +1702,13 @@ footer {
   padding: 5rem 13.88rem;
   background: #131010;
   @media (max-width: 1300px) {
-    padding: 5rem;
+    padding-inline: 3rem;
   }
-  @media (max-width: 1000px) {
-    padding: 5rem 3rem;
+  @media (max-width: 850px) {
+    padding-inline: 2rem;
+  }
+  @media (max-width: 768px) {
+    padding-inline: 1rem;
   }
   .container {
     display: flex;
