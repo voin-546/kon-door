@@ -811,6 +811,9 @@ section {
         border: 1px solid #201A1A;
         color: #201a1a;
         padding: 30px;
+        @media (max-width: 768px) {
+          padding: 20px;
+        }
         h2 {
           font: 400 48px/20px "Garamond";
           text-transform: uppercase;
@@ -945,6 +948,9 @@ section {
         margin-top: 2.5rem;
         @media (max-width: 1178px) {
           justify-content: center;
+        }
+        @media (max-width: 768px) {
+          gap: .7rem;
         }
       }
       .faq {
@@ -1107,6 +1113,7 @@ section {
           padding: .5rem;
           font-family: "Open Sans";
           resize: none;
+          outline: none;
         }
         .agree {
           padding: 1.87rem 0 2rem;
