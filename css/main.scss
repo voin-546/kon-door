@@ -1392,6 +1392,9 @@ section {
   &.variant {
     h1 {
       text-align: start;
+      @media (max-width: 460px) {
+        text-align: center;
+      }
     }
     .cards {
       display: flex;
@@ -1478,6 +1481,11 @@ section {
   &.furniture {
     h1 {
       line-height: 35px;
+    }
+    p {
+      @media (max-width: 575px) {
+        text-align: center;
+      }
     }
     .cards {
       display: flex;
