@@ -403,7 +403,7 @@ main {
         font: 700 18px "Open Sans";
         display: inline-block;
         @media (max-width: 487px) {
-          padding: 15px 85px;
+          padding: 15px 35px;
         }
         &.icon {
           border: none;
@@ -973,7 +973,7 @@ section {
             height: 17rem;
           }
           @media (max-width: 412px) {
-            height: 20rem;
+            height: 18.3rem;
           }
           svg {
             transform: rotate(135deg);
